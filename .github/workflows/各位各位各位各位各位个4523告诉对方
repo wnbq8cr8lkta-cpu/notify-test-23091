@@ -1,0 +1,7 @@
+name: 各位各位各位各位各位个4523告诉对方
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "notification mail test"
