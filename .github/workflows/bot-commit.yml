@@ -1,0 +1,18 @@
+name: bot-commit
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bot commit
+        run: |
+          echo "test $(date)" > bot-commit.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add bot-commit.txt
+          git commit -m "各位各位各位各位各位个4523告诉对方"
+          git push
